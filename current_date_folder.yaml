@@ -1,0 +1,11 @@
+---
+ - hosts: win
+   tasks:
+     - name: Ansible date fact example
+       debug:
+         var=ansible_date_time.date
+     - name: Create directory structure
+       win_file:
+         path: C:\Users\yash\Desktop\{{ansible_date_time.date}}
+         state: directory  
+  
