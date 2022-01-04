@@ -1,5 +1,6 @@
 ---
-  - tasks:
+  - hosts: win
+    tasks:
     - name: Check if the post.exj exists
       win_stat: 
         path: 'C:\Users\yash\Desktop\{{ item }}.exj'  
