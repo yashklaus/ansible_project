@@ -3,7 +3,7 @@
    tasks:
      - name: Check if the post.exj exists
        win_stat: 
-         path= 'C:\Users\yash\Desktop\POST.01.exj'  
+         path: 'C:\Users\yash\Desktop\POST.01.exj'  
        register: stat_file
      
      - name: Change exj to eoj
