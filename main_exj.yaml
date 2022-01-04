@@ -1,10 +1,13 @@
 ---
   - hosts: win
-  - include_tasks: exj_to_eoj.yaml
-    loop:
-      - POST.01
-      - POST.02
-      - POST.03
-      - POST.04
-      - POST.05
-      - POST.06
+    tasks:
+      - name: Including the exjtoeoj file
+        include_tasks: exj_to_eoj.yaml
+        loop:
+          - POST.01
+          - POST.02
+          - POST.03
+          - POST.04
+          - POST.05
+          - POST.06
+      
