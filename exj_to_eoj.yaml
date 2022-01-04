@@ -2,8 +2,10 @@
  - hosts: win
    tasks:
      - name: Check if the post.exj exists
-       win_stat: path= 'C:\Users\yash\Desktop\POST.01.exj'  
+       win_stat: 
+         path= 'C:\Users\yash\Desktop\POST.01.exj'  
        register: stat_file
+     
      - name: Change exj to eoj
        win_shell: Get-ChildItem C:\Users\yash\Desktop\POST.01.exj | Rename-Item -NewName { $_.name -Replace '\.exj$','.eoj' }
        when: stat_file.stat.exists == True
