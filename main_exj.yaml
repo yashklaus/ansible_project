@@ -3,7 +3,7 @@
     tasks:
       - name: Including the exjtoeoj file
         include_tasks: exj_to_eoj.yaml
-        loop:
+        with_items:
           - POST.01
           - POST.02
           - POST.03
